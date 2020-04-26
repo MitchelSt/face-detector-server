@@ -32,4 +32,4 @@ app.post('/register', register.handleRegister(db, bcrypt))
 app.get('/profile/:id', profile.handleProfileGet(db))
 app.put('/image', image.handleImagePut(db))
 
-app.listen(3000, () => { console.log('app is running on port 3000') })
+app.listen(process.env.PORT || 3000, () => { console.log(`app is running on port ${process.env.PORT}`) })
